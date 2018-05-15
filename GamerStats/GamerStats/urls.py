@@ -16,8 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from .views import HomePage
+from .views import HomePage, FortNiteHome
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', HomePage.as_view(),name='homepage')
+    url(r'^$', HomePage.as_view(),name='homepage'),
+    url(r'^fortnite/$',FortNiteHome.as_view(),name='fortnitehome')
 ]

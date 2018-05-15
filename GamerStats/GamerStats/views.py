@@ -10,3 +10,6 @@ class HomePage(BaseView):
         return render(request,'HomePage.html',{})
     
 
+class FortNiteHome(BaseView):
+    def get(self,request):
+        return HttpResponse("Hey Inside Fortnite")
